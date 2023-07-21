@@ -10,6 +10,8 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var nickName: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun addNickName(view : View){
         val editText : EditText = findViewById(R.id.nickname_edit)
-        val nicknameTextView = findViewById<TextView>(R.id.nickname_text)
+        val nicknameTextView = nickName
 
         nicknameTextView.text = editText.text
         editText.visibility = View.GONE
